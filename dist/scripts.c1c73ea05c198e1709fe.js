@@ -1,0 +1,1 @@
+function vibrateFor(i){window.navigator.vibrate(i)}
