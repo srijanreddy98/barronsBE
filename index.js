@@ -44,6 +44,21 @@ app.get('/api/load', (req, res) => {
 app.get('/api/check', (req, res) => {
     Word.findOneAndUpdate({id: req.body.id}).then(docs => res.send(docs), err=> res.send(err));
 });
+app.post('/api/addWord', (req, res) => {
+    let word = new Word(req.body);
+    word.save().then(
+        doc => res.send(doc),
+        err => res.send(err)
+    )
+})
+app.get('/api/wordCount', (req, res) => {
+    Word.countDocuments().then(
+        count => {
+            res.send({count, otherField: 'shit'})
+        },
+        err => res.send(err)
+    );
+})
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname + '/dist', 'index.html'));
 });

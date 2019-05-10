@@ -2,8 +2,6 @@ const { mongoose } = require("./db");
 const { Schema } = mongoose;
 
 const wordSchema = new Schema({
-    comments: Number,
-    likes: Number,
     id:Number,
     word:String,
     meaning:String,
