@@ -1,0 +1,179 @@
+[
+    {
+        "word": "abasement",
+        "data": {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "abasement",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "entries": [
+                                {
+                                    "grammaticalFeatures": [
+                                        {
+                                            "text": "Mass",
+                                            "type": "Countability"
+                                        },
+                                        {
+                                            "text": "Singular",
+                                            "type": "Number"
+                                        }
+                                    ],
+                                    "homographNumber": "000",
+                                    "senses": [
+                                        {
+                                            "definitions": [
+                                                "the action or fact of abasing or being abased; humiliation or degradation."
+                                            ],
+                                            "id": "m_en_gbus0000900.005",
+                                            "short_definitions": [
+                                                "action or fact of abasing or being abased"
+                                            ],
+                                            "thesaurusLinks": [
+                                                {
+                                                    "entry_id": "abasement",
+                                                    "sense_id": "t_en_gb0000006.001"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "pronunciations": [
+                                {
+                                    "audioFile": "http://audio.oxforddictionaries.com/en/mp3/abasement_gb_1.mp3",
+                                    "dialects": [
+                                        "British English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "əˈbeɪsm(ə)nt"
+                                }
+                            ],
+                            "text": "abasement"
+                        }
+                    ],
+                    "type": "headword",
+                    "word": "abasement"
+                }
+            ]
+        }
+    },
+    {
+        "word": "aberrant",
+        "data": {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "aberrant",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "derivatives": [
+                                {
+                                    "id": "aberrancy",
+                                    "text": "aberrancy"
+                                },
+                                {
+                                    "id": "aberrantly",
+                                    "text": "aberrantly"
+                                },
+                                {
+                                    "id": "aberrance",
+                                    "text": "aberrance"
+                                }
+                            ],
+                            "entries": [
+                                {
+                                    "etymologies": [
+                                        "mid 16th century: from Latin aberrant- ‘wandering away’, from the verb aberrare, from ab- ‘away, from’ + errare ‘to stray’"
+                                    ],
+                                    "grammaticalFeatures": [
+                                        {
+                                            "text": "Positive",
+                                            "type": "Degree"
+                                        }
+                                    ],
+                                    "homographNumber": "000",
+                                    "senses": [
+                                        {
+                                            "definitions": [
+                                                "departing from an accepted standard"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "this somewhat aberrant behaviour requires an explanation"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0001630.007",
+                                            "short_definitions": [
+                                                "departing from accepted standard"
+                                            ],
+                                            "subsenses": [
+                                                {
+                                                    "definitions": [
+                                                        "diverging from the normal type"
+                                                    ],
+                                                    "domains": [
+                                                        "Biology"
+                                                    ],
+                                                    "examples": [
+                                                        {
+                                                            "text": "aberrant chromosomes"
+                                                        }
+                                                    ],
+                                                    "id": "m_en_gbus0001630.009",
+                                                    "short_definitions": [
+                                                        "diverging from normal type"
+                                                    ],
+                                                    "thesaurusLinks": [
+                                                        {
+                                                            "entry_id": "deviant",
+                                                            "sense_id": "t_en_gb0003865.001"
+                                                        },
+                                                        {
+                                                            "entry_id": "aberrant",
+                                                            "sense_id": "t_en_gb0000022.001"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "thesaurusLinks": [
+                                                {
+                                                    "entry_id": "aberrant",
+                                                    "sense_id": "t_en_gb0000022.001"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Adjective",
+                            "pronunciations": [
+                                {
+                                    "audioFile": "http://audio.oxforddictionaries.com/en/mp3/aberrant_gb_1_8.mp3",
+                                    "dialects": [
+                                        "British English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "əˈbɛr(ə)nt"
+                                }
+                            ],
+                            "text": "aberrant"
+                        }
+                    ],
+                    "type": "headword",
+                    "word": "aberrant"
+                }
+            ]
+        }
+    }
+]
