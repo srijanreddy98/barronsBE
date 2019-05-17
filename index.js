@@ -11,7 +11,7 @@ const fs = require('fs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/dist'));
-app.post('/api/query', (req, res) => {
+app.post('/api/query/oxford', (req, res) => {
     const {unit} = req.body.query;
     if (req.body.query.update) {
         Oxford.findOneAndUpdate({id: req.body.query.id}, {$set:{mark1: req.body.query.mark1}}).then(doc => res.send(doc), err => res.send(err));
@@ -24,7 +24,7 @@ app.post('/api/query', (req, res) => {
         }
     }
 });
-app.post('/api/query/oxford', (req, res) => {
+app.post('/api/query/', (req, res) => {
     const {unit} = req.body.query;
     if (req.body.query.update) {
         Word.findOneAndUpdate({id: req.body.query.id}, {$set:{mark1: req.body.query.mark1}}).then(doc => res.send(doc), err => res.send(err));
