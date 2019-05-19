@@ -7,7 +7,8 @@ const wordSchema = new Schema({
     meaning:String,
     unit:Number,
     mark1:Boolean,
-    mark2:Boolean
+    mark2:Boolean,
+    google: String
 });
 
 const oxfordSchema = new Schema({
