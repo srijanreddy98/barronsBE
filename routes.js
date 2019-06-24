@@ -10,7 +10,7 @@ let routes = (app) => {
         } else {
             // console.log(req.query.markedWords)
             if (!req.body.query.markedWords) {
-                Oxford.find({unit: unit}).then(docs => res.send(docs), err=> res.send(err));
+                Oxford.find({unit: { "$in": unit }}).then(docs => res.send(docs), err=> res.send(err));
             } else {
                 Oxford.find({mark1: true}).then(docs => res.send(docs), err=> res.send(err));
             }
@@ -23,7 +23,7 @@ let routes = (app) => {
         } else {
             // console.log(req.query.markedWords)
             if (!req.body.query.markedWords) {
-                Word.find({unit: unit}).then(docs => res.send(docs), err=> res.send(err));
+                Word.find({unit: { "$in": unit }}).then(docs => res.send(docs), err=> res.send(err));
             } else {
                 Word.find({mark1: true}).then(docs => res.send(docs), err=> res.send(err));
             }
