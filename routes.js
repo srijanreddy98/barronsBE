@@ -22,9 +22,12 @@ let routes = (app) => {
             Word.findOneAndUpdate({id: req.body.query.id}, {$set:{mark1: req.body.query.mark1}}).then(doc => res.send(doc), err => res.send(err));
         } else {
             // console.log(req.query.markedWords)
-            if (!req.body.query.markedWords) {
+            if (!req.body.query.markedWords && !req.query.doubleMarked) {
                 Word.find({unit: { "$in": unit }}).then(docs => res.send(docs), err=> res.send(err));
-            } else {
+            } else if (req.query.doubleMarked) {
+                Word.find({mark2: true, unit: { "$in": unit }}).then(docs => res.send(docs), err=> res.send(err));
+            }
+             else {
                 Word.find({mark1: true, unit: { "$in": unit }}).then(docs => res.send(docs), err=> res.send(err));
             }
         }
