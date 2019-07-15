@@ -19,18 +19,26 @@ let routes = (app) => {
     app.post('/api/query/', (req, res) => {
         const {unit} = req.body.query;
         if (req.body.query.update) {
-            Word.findOneAndUpdate({id: req.body.query.id}, {$set:{mark1: req.body.query.mark1}}).then(doc => res.send(doc), err => res.send(err));
+            let upd = {mark1: req.body.query.mark1};
+            if (req.body.query.mark2) upd = {mark2: req.body.query.mark2};
+            Word.findOneAndUpdate({id: req.body.query.id}, {$set:upd}).then(doc => res.send(doc), err => res.send(err));
         } else {
-            // console.log(req.query.markedWords)
-            if (!req.body.query.markedWords && !req.query.doubleMarked) {
+            if (!req.body.query.markedWords && !req.body.query.doubleMarked) {
                 Word.find({unit: { "$in": unit }}).then(docs => res.send(docs), err=> res.send(err));
-            } else if (req.query.doubleMarked) {
+            } else if (req.body.query.doubleMarked) {
                 Word.find({mark2: true, unit: { "$in": unit }}).then(docs => res.send(docs), err=> res.send(err));
             }
              else {
                 Word.find({mark1: true, unit: { "$in": unit }}).then(docs => res.send(docs), err=> res.send(err));
             }
         }
+    });
+
+    app.get('/api/fix', (req, res) => {
+        Word.find({mark1: null}).updateMany({$set: {mark1: true, mark2:true}}).then(
+            docs => {console.log(docs);res.send({num: docs.length});},
+            err => res.send(err)
+        );
     });
     app.get('/api/backup', (req, res) => {
         query('select * from words').then(
